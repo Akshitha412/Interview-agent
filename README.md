@@ -15,10 +15,13 @@ Traditional mock interview systems usually follow a fixed pattern:
 
 Question 1
     ↓
+    
 Question 2
     ↓
+    
 Question 3
     ↓
+    
 Final Score
 
 ---
@@ -330,7 +333,8 @@ Recommendation
 | **Persistence**       | JSON + Markdown         |
 | **Testing**           | Offline Mock Mode       |
 
-📦 Installation
+
+### Installation
 
 1. Clone the Repository
 
