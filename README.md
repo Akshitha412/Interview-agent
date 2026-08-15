@@ -4,7 +4,9 @@ An AI-powered adaptive technical interviewer that conducts real-time technical i
 
 **Role + Skills + Experience → Adaptive Interview → Evaluation → Hiring Recommendation**
 
+
 ---
+
 
 ## 🎯 Why This Agent?
 
@@ -87,9 +89,11 @@ Save Interview Report
                     └──────────────────────┘
 
 
+
 ---
 
 ### ⭐ Key Features
+
 
 | Feature                         |                  What it does |
 |---|---|
