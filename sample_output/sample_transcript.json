@@ -1,0 +1,51 @@
+{
+  "role": "Data Analyst",
+  "skills": "SQL, Python, Statistics",
+  "model": "llama-3.3-70b-versatile",
+  "timestamp": "2026-08-14T12:00:00Z",
+  "transcript": [
+    {
+      "question": "Walk me through how you'd find the top 3 highest-paid employees in each department using SQL.",
+      "answer": "I'd start by writing a SQL query using window functions like RANK() partitioned by department to find the top earners, then join back to the employee table to pull names and titles.",
+      "score": 8,
+      "feedback": "Correctly identifies RANK() with PARTITION BY as the right tool. Could have mentioned handling ties (RANK vs DENSE_RANK) or naming the exact join condition for full credit."
+    },
+    {
+      "question": "What's the difference between normalized and denormalized database schemas, and when would you choose one over the other?",
+      "answer": "Normalization reduces data redundancy by splitting data into related tables, while denormalization combines tables back together to speed up read-heavy queries at the cost of some duplication. I'd denormalize for a reporting dashboard that's read far more than it's written.",
+      "score": 9,
+      "feedback": "Clear, accurate definition with a concrete, well-reasoned use case. Strong answer."
+    },
+    {
+      "question": "In Python, how would you compute total revenue per customer from a large CSV and rank customers by that total?",
+      "answer": "In Python I'd use pandas to load the CSV, then groupby the customer_id column and aggregate with sum() on the revenue column, followed by sort_values(ascending=False) to rank customers.",
+      "score": 8,
+      "feedback": "Correct and idiomatic pandas approach. Could mention chunked reading for files too large to fit in memory."
+    },
+    {
+      "question": "Tell me about a time you found and fixed a bug in a data pipeline or dashboard. What was your process?",
+      "answer": "Once, a dashboard I built was showing incorrect week-over-week numbers. I traced it to a timezone mismatch between the app server and the database, wrote a regression test, and documented the fix so it wouldn't recur.",
+      "score": 9,
+      "feedback": "Excellent behavioral answer: clear root cause, a fix, a regression test, and documentation to prevent recurrence."
+    },
+    {
+      "question": "How would you explain a p-value to a non-technical stakeholder, and what's a common misconception about it?",
+      "answer": "I'd explain a p-value as the probability of seeing data at least as extreme as what we observed, assuming the null hypothesis is true. A small p-value suggests the observed effect is unlikely to be due to chance alone, but it doesn't tell you the size or practical importance of the effect.",
+      "score": 9,
+      "feedback": "Technically accurate definition and correctly flags the \"statistical vs. practical significance\" misconception. Strong communication for a non-technical audience."
+    }
+  ],
+  "final_evaluation": {
+    "overall_score": 8.6,
+    "strengths": [
+      "Strong, idiomatic command of both SQL (window functions) and pandas for common analyst workflows.",
+      "Statistical concepts (p-values) explained accurately and in stakeholder-friendly language.",
+      "Debugging story shows a full root-cause -> fix -> regression-test -> documentation loop, not just a patch."
+    ],
+    "gaps": [
+      "Edge cases (tie-handling in ranking queries, out-of-memory data) were not proactively raised.",
+      "No answer touched on experiment design or statistical power, which would round out the statistics skill area."
+    ],
+    "summary": "This candidate shows solid, practical SQL and Python skills for analyst work along with above-average statistical communication. Strong hire signal for a Data Analyst role; a follow-up round could probe experimental design and handling of messier, larger-scale data."
+  }
+}
