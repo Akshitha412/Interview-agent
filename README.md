@@ -19,7 +19,7 @@ Question 3
     ↓
 Final Score
 
-
+---
 🧠 Key Idea
 
 The system is not simply:
@@ -86,8 +86,8 @@ Save Interview Report
                     │ Not Recommended      │
                     └──────────────────────┘
 
-
-## ⭐ Key Features
+---
+### ⭐ Key Features
 
 | Feature                         |                  What it does |
 |---|---|
