@@ -1,10 +1,10 @@
-🚀 Interview Agent
+# Interview Agent
 
 An AI-powered adaptive technical interviewer that evaluates candidates in real time, identifies skill gaps, and generates a personalized interview assessment.
 
 Role + Skills + Experience → Adaptive Interview → Instant Evaluation → Hiring Recommendation
 
-🎯 Why This Agent?
+# Why This Agent?
 
 Traditional mock interviews usually give you a fixed list of questions and a final score.
 
@@ -22,7 +22,7 @@ It:
 💾 Saves the complete interview as JSON + Markdown
 
 
-# The key idea
+##  The key idea
 
 Candidate
     │
