@@ -389,19 +389,31 @@ python interview_agent.py \
 
 
 interview_agent/
+
 │
 ├── interview_agent.py
+
 ├── requirements.txt
+
 ├── .env.example
+
 ├── .gitignore
+
 ├── README.md
+
 │
 ├── sample_output/
+
 │   ├── sample_answers.json
+
 │   ├── sample_transcript.md
+
 │   └── sample_transcript.json
+
 │
+
 └── sessions/
+
     └── <generated-interview-sessions>
 
 
@@ -501,11 +513,14 @@ Overall Score: 5.33/10
 
 Strengths:
 ✓ Basic understanding of try-except blocks
+
 ✓ Ability to identify key steps to optimize Python script performance
 
 Gaps:
 ✗ Lack of concrete examples from recent projects
+
 ✗ Limited understanding of static and dynamic typing
+
 ✗ Need for improvement in code syntax and explanation clarity
 
 Recommendation:
