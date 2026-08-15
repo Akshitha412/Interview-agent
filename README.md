@@ -338,23 +338,28 @@ Recommendation
 
 1. Clone the Repository
 
-git clone <this-repo-url>
-cd interview_agent
+      git clone <this-repo-url>
+
+      cd interview_agent
 
 
 
 2. Create a Virtual Environment
 
-python -m venv venv
-.\venv\Scripts\Activate.ps1
+
+          python -m venv venv
+          
+        .\venv\Scripts\Activate.ps1
 
 3. Install Dependencies
 
-pip install -r requirements.txt
+
+        pip install -r requirements.txt
 
 4.  Configure Groq API Key
 
-GROQ_API_KEY=your_groq_api_key_here
+
+      GROQ_API_KEY=your_groq_api_key_here
 
 ### Running the Agent
 Interactive Mode
