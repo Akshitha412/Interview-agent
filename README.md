@@ -1,36 +1,50 @@
-# Interview Agent
+# 🚀 Interview Agent
 
-An AI-powered adaptive technical interviewer that evaluates candidates in real time, identifies skill gaps, and generates a personalized interview assessment.
+An AI-powered adaptive technical interviewer that conducts real-time technical interviews, evaluates candidate answers, identifies skill gaps, and generates a personalized hiring-style assessment.
 
-Role + Skills + Experience → Adaptive Interview → Instant Evaluation → Hiring Recommendation
+**Role + Skills + Experience → Adaptive Interview → Evaluation → Hiring Recommendation**
 
-### Why This Agent?
+---
 
-Traditional mock interviews usually give you a fixed list of questions and a final score.
+## 🎯 Why This Agent?
 
-Interview Agent turns the interview itself into an evaluation loop.
+Traditional mock interview systems usually follow a fixed pattern:
 
-It:
-
-🎯 Generates questions based on role + skills + experience level
-
-💬 Supports real interactive interviews
-
-📝 Supports multi-line coding answers
-
-⚡ Evaluates every answer immediately
-
-🧠 Identifies strengths and knowledge gaps
-
-📊 Produces an overall performance score
-
-🎯 Gives a hiring-style recommendation
-
-💾 Saves the complete interview as JSON + Markdown
+```text
+Question 1
+    ↓
+Question 2
+    ↓
+Question 3
+    ↓
+Final Score
 
 
+🧠 Key Idea
 
+The system is not simply:
 
+Prompt → LLM → Answer
+Instead, it maintains a complete interview workflow:
+Configure
+    ↓
+Generate Questions
+    ↓
+Ask Question
+    ↓
+Collect Answer
+    ↓
+Evaluate Answer
+    ↓
+Record Score + Feedback
+    ↓
+Continue Interview
+    ↓
+Aggregate Performance
+    ↓
+Generate Candidate Assessment
+    ↓
+Save Interview Report
 ### 🧠 The key area
 
 ```text
