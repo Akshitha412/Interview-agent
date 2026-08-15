@@ -4,7 +4,7 @@ An AI-powered adaptive technical interviewer that evaluates candidates in real t
 
 Role + Skills + Experience → Adaptive Interview → Instant Evaluation → Hiring Recommendation
 
-## Why This Agent?
+### Why This Agent?
 
 Traditional mock interviews usually give you a fixed list of questions and a final score.
 
@@ -13,21 +13,30 @@ Interview Agent turns the interview itself into an evaluation loop.
 It:
 
 🎯 Generates questions based on role + skills + experience level
+
 💬 Supports real interactive interviews
+
 📝 Supports multi-line coding answers
+
 ⚡ Evaluates every answer immediately
+
 🧠 Identifies strengths and knowledge gaps
+
 📊 Produces an overall performance score
+
 🎯 Gives a hiring-style recommendation
+
 💾 Saves the complete interview as JSON + Markdown
 
 
-##  The key idea
+### The key idea
 
 Candidate
     │
+    
     │ Role + Skills + Experience
     ▼
+    
 ┌─────────────────────────────┐
 │     AI INTERVIEWER          │
 │                             │
@@ -36,18 +45,21 @@ Candidate
 │      └──── Adapt ───┘       │
 └─────────────────────────────┘
              │
+             
              ▼
       Candidate Profile
+      
              │
       ┌──────┼───────┐
       ▼      ▼       ▼
     Score  Strengths Gaps
+    
              │
              ▼
        Recommendation
 
 
-# | Feature                       | What it does                                |
+### | Feature                       | What it does                                |
 | ----------------------------- | ------------------------------------------- |
 | 🤖 **AI Question Generation** | Generates role-specific technical questions |
 | 🎯 **Experience Awareness**   | Fresher / Intermediate / Advanced           |
@@ -62,7 +74,7 @@ Candidate
 | 📁 **Reproducible Mode**      | Supports predefined answer files            |
       
 
-# HOW THE AGENT WORKS
+### HOW THE AGENT WORKS
 
                  CANDIDATE SETUP
                        │
@@ -109,7 +121,7 @@ Candidate
                                     ▼
                          JSON + Markdown Report
 
-## Interactive Interview
+### Interactive Interview
     Run: python interview_agent.py
      
 ==================================================
@@ -129,7 +141,7 @@ Enter choice (1-3): 2
 
 How many questions? [default: 5]: 5
 
-## Experience Levels
+#### Experience Levels
 
 The candidate selects an experience level before the interview. The selected
 level is provided to the LLM so that generated questions can be appropriate
@@ -141,7 +153,7 @@ to the candidate's experience.
 | Intermediate | Applied concepts, problem solving, practical scenarios |
 | Advanced | System design, optimization, architecture, complex scenarios |
 
-## Multi-line answers
+#### Multi-line answers
 
 Coding questions aren't restricted to one line.
 
@@ -165,7 +177,7 @@ Press ':submit' on a new line when you are finished.
 
 his is a great feature to demonstrate, so keep it prominent
 
-## FINAL CANDIDATE ASSESSMENT
+### FINAL CANDIDATE ASSESSMENT
 
 ==================================================
              FINAL EVALUATION
@@ -194,7 +206,7 @@ The candidate demonstrated strong Python and SQL fundamentals
 with good practical problem-solving ability. Further improvement
 in system design would strengthen their readiness for backend roles.
 
-## ARCHITECTURE
+### ARCHITECTURE
                     ┌───────────────┐
                     │ Candidate     │
                     │ Configuration │
@@ -236,7 +248,7 @@ in system design would strengthen their readiness for backend roles.
                     ▼             ▼
                   JSON          Markdown
 
-## WHAT MAKES IT DIFFERENT
+### WHAT MAKES IT DIFFERENT
 
 This is the section I'd definitely add for a challenge.
 
@@ -275,7 +287,7 @@ Persistent artifacts
 
 Those are much stronger signals in an AI-agent challenge than simply calling an LLM.
 
-## TECH STACK
+### TECH STACK
 | Layer             | Technology              |
 | ----------------- | ----------------------- |
 | Language          | Python                  |
@@ -354,7 +366,8 @@ python interview_agent.py --role "Data Analyst" \
 Every run writes a timestamped transcript to `sessions/<timestamp>_<role>.json`
 and `.md`.
 
-### demo
+### DEMO
+
    ==================================================
            AI INTERVIEW AGENT
 ==================================================
