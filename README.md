@@ -31,7 +31,7 @@ It:
 
 
 
-### 🧠 How the Agent Works
+### 🧠 The key area
 
 ```text
                     ┌──────────────────────┐
@@ -73,19 +73,30 @@ It:
 
 ## ⭐ Key Features
 
-| Feature | What it does |
+| Feature                         |                  What it does |
 |---|---|
 | 🤖 **AI Question Generation** | Generates role-specific technical questions |
+
 | 🎯 **Experience Awareness** | Fresher / Intermediate / Advanced |
+
 | 🔄 **Adaptive Interview** | Adapts the interview based on candidate responses |
+
 | 💬 **Interactive Interview** | Conducts the interview directly in the CLI |
+
 | 📝 **Multi-line Answers** | Supports coding and detailed responses |
+
 | ⚡ **Instant Evaluation** | Scores every answer immediately |
+
 | 📊 **Final Assessment** | Calculates an overall interview score |
+
 | 🔍 **Gap Detection** | Identifies areas requiring improvement |
+
 | 🎯 **Recommendation** | Provides a hiring-style recommendation |
+
 | 💾 **Persistent Sessions** | Saves JSON + Markdown transcripts |
+
 | 🧪 **Mock Mode** | Runs without API/network |
+
 | 📁 **Reproducible Mode** | Supports predefined answer files |
       
 
@@ -156,7 +167,7 @@ Enter choice (1-3): 2
 
 How many questions? [default: 5]: 5
 
-#### Experience Levels
+### Experience Levels
 
 The candidate selects an experience level before the interview. The selected
 level is provided to the LLM so that generated questions can be appropriate
@@ -168,15 +179,15 @@ to the candidate's experience.
 | Intermediate | Applied concepts, problem solving, practical scenarios |
 | Advanced | System design, optimization, architecture, complex scenarios |
 
-#### Multi-line answers
+### Multi-line answers
 
 Coding questions aren't restricted to one line.
 
-Q1: Write a Python function to...
+    Q1: Write a Python function to...
 
 
-Type your answer below.
-Press ':submit' on a new line when you are finished.
+   Type your answer below.
+  Press ':submit' on a new line when you are finished.
 
 
 > def calculate_total(items):
@@ -190,7 +201,6 @@ Press ':submit' on a new line when you are finished.
 → Score: 8/10
 → Feedback: Strong implementation...
 
-his is a great feature to demonstrate, so keep it prominent
 
 ### FINAL CANDIDATE ASSESSMENT
 
