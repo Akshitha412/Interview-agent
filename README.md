@@ -330,7 +330,9 @@ Those are much stronger signals in an AI-agent challenge than simply calling an 
 
 
 
-## 1. Intall
+### 1. install
+
+
 ```bash
 git clone <this-repo-url>
 cd interview_agent
@@ -340,7 +342,7 @@ pip install -r requirements.txt
 
 Requires Python 3.9+.
 
-2. Configure your Groq API key
+### 2. Configure your Groq API key
 
 1. Get a free key at https://console.groq.com/keys
 
