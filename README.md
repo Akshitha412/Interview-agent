@@ -94,33 +94,22 @@ Save Interview Report
 
 ### ⭐ Key Features
 
-
-| Feature                         |                  What it does |
+| Feature | What it does |
 |---|---|
 | 🤖 **AI Question Generation** | Generates role-specific technical questions |
-
 | 🎯 **Experience Awareness** | Fresher / Intermediate / Advanced |
-
 | 🔄 **Adaptive Interview** | Adapts the interview based on candidate responses |
-
 | 💬 **Interactive Interview** | Conducts the interview directly in the CLI |
-
 | 📝 **Multi-line Answers** | Supports coding and detailed responses |
-
 | ⚡ **Instant Evaluation** | Scores every answer immediately |
-
 | 📊 **Final Assessment** | Calculates an overall interview score |
-
 | 🔍 **Gap Detection** | Identifies areas requiring improvement |
-
 | 🎯 **Recommendation** | Provides a hiring-style recommendation |
-
 | 💾 **Persistent Sessions** | Saves JSON + Markdown transcripts |
-
 | 🧪 **Mock Mode** | Runs without API/network |
-
 | 📁 **Reproducible Mode** | Supports predefined answer files |
 
+---
  
 ---
 
