@@ -12,7 +12,7 @@ An AI-powered adaptive technical interviewer that conducts real-time technical i
 
 Traditional mock interview systems usually follow a fixed pattern:
 
-```text
+
 Question 1
     ↓
 Question 2
@@ -90,9 +90,12 @@ Save Interview Report
 
 
 
+    
+
 ---
 
-### ⭐ Key Features
+
+### **⭐ Key Features**
 
 | Feature | What it does |
 |---|---|
@@ -109,7 +112,7 @@ Save Interview Report
 | 🧪 **Mock Mode** | Runs without API/network |
 | 📁 **Reproducible Mode** | Supports predefined answer files |
 
----
+
  
 ---
 
@@ -161,7 +164,8 @@ Save Interview Report
                                     ▼
                          JSON + Markdown Report
 
-''
+---
+
 
 
 ### Experience Levels
@@ -175,6 +179,10 @@ The selected level is provided to the LLM so that questions can match the candid
 | **Fresher**      | Fundamentals, basic concepts, simple coding                  |
 | **Intermediate** | Applied concepts, problem solving, practical scenarios       |
 | **Advanced**     | System design, optimization, architecture, complex scenarios |
+
+
+---
+
 
 ### Interactive Interview
 
