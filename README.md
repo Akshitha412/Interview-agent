@@ -25,7 +25,9 @@ Final Score
 The system is not simply:
 
 Prompt → LLM → Answer
+
 Instead, it maintains a complete interview workflow:
+
 Configure
     ↓
 Generate Questions
@@ -45,9 +47,9 @@ Aggregate Performance
 Generate Candidate Assessment
     ↓
 Save Interview Report
-### 🧠 The key area
 
-```text
+
+
                     ┌──────────────────────┐
                     │      CANDIDATE       │
                     └──────────┬───────────┘
@@ -114,7 +116,7 @@ Save Interview Report
 | 📁 **Reproducible Mode** | Supports predefined answer files |
       
 
-### HOW THE AGENT WORKS
+## HOW THE AGENT WORKS
 
                  CANDIDATE SETUP
                        │
@@ -161,7 +163,23 @@ Save Interview Report
                                     ▼
                          JSON + Markdown Report
 
+''
+
+
+### Experience Levels
+
+The candidate selects an experience level before starting the interview.
+
+The selected level is provided to the LLM so that questions can match the candidate's expected dept
+
+| Level            | Intended Focus                                               |
+| ---------------- | ------------------------------------------------------------ |
+| **Fresher**      | Fundamentals, basic concepts, simple coding                  |
+| **Intermediate** | Applied concepts, problem solving, practical scenarios       |
+| **Advanced**     | System design, optimization, architecture, complex scenarios |
+
 ### Interactive Interview
+
     Run: python interview_agent.py
      
 ==================================================
@@ -181,28 +199,15 @@ Enter choice (1-3): 2
 
 How many questions? [default: 5]: 5
 
-### Experience Levels
-
-The candidate selects an experience level before the interview. The selected
-level is provided to the LLM so that generated questions can be appropriate
-to the candidate's experience.
-
-| Level | Intended Focus |
-|---|---|
-| Fresher | Fundamentals, basic concepts, simple coding |
-| Intermediate | Applied concepts, problem solving, practical scenarios |
-| Advanced | System design, optimization, architecture, complex scenarios |
 
 ### Multi-line answers
 
 Coding questions aren't restricted to one line.
 
-    Q1: Write a Python function to...
+   Q1: Write a Python function to calculate the total of a list.
 
-
-   Type your answer below.
-  Press ':submit' on a new line when you are finished.
-
+Type your answer below.
+Press ':submit' on a new line when you are finished.
 
 > def calculate_total(items):
 >     total = 0
@@ -211,7 +216,7 @@ Coding questions aren't restricted to one line.
 >     return total
 > :submit
 
-
+The answer is then evaluated immediately:
 → Score: 8/10
 → Feedback: Strong implementation...
 
@@ -239,11 +244,6 @@ Gaps:
 
 Recommendation:
 Ready
-
-Summary:
-The candidate demonstrated strong Python and SQL fundamentals
-with good practical problem-solving ability. Further improvement
-in system design would strengthen their readiness for backend roles.
 
 ### ARCHITECTURE
                     ┌───────────────┐
@@ -289,89 +289,83 @@ in system design would strengthen their readiness for backend roles.
 
 ### WHAT MAKES IT DIFFERENT
 
-This is the section I'd definitely add for a challenge.
+The project goes beyond a single LLM API call.
 
-From a Question Generator → to an Evaluation Agent
-
-The system isn't simply:
-
-Prompt → LLM → Answer
-
-Instead, it maintains an interview workflow:
-
-Configure
-   ↓
-Generate Questions
-   ↓
-Collect Answer
-   ↓
-Evaluate
-   ↓
-Record Result
-   ↓
-Continue Interview
-   ↓
-Aggregate Performance
-   ↓
-Generate Candidate Assessment
-
-This demonstrates:
-
-LLM orchestration
-Structured outputs
-Stateful workflow
-Tool/API integration
-Evaluation
-Persistent artifacts
-
-Those are much stronger signals in an AI-agent challenge than simply calling an LLM.
-
-### TECH STACK
-| Layer             | Technology              |
-| ----------------- | ----------------------- |
-| Language          | Python                  |
-| LLM Provider      | Groq                    |
-| Model             | Llama 3.3 70B Versatile |
-| Interface         | CLI                     |
-| Configuration     | `.env`                  |
-| Structured Output | JSON                    |
-| Persistence       | JSON + Markdown         |
-| Testing           | Mock mode               |
+The system maintains a stateful workflow where the output of one stage becomes the input for the next stage
 
 
+Candidate Configuration
+          ↓
+Question Generation
+          ↓
+Candidate Answer
+          ↓
+Answer Evaluation
+          ↓
+Interview State
+          ↓
+Final Candidate Analysis
+          ↓
+Recommendation
 
+| Layer                 | Technology              |
+| --------------------- | ----------------------- |
+| **Language**          | Python                  |
+| **LLM Provider**      | Groq                    |
+| **Model**             | Llama 3.3 70B Versatile |
+| **Interface**         | CLI                     |
+| **Configuration**     | `.env`                  |
+| **Structured Output** | JSON                    |
+| **Persistence**       | JSON + Markdown         |
+| **Testing**           | Offline Mock Mode       |
 
+📦 Installation
 
+1. Clone the Repository
 
-
-### 1. install
-
-
-```bash
 git clone <this-repo-url>
 cd interview_agent
-python3 -m venv venv && source venv/bin/activate   # optional but recommended
+
+
+
+2. Create a Virtual Environment
+
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+3. Install Dependencies
+
 pip install -r requirements.txt
-```
 
-Requires Python 3.9+.
+4.  Configure Groq API Key
 
-### 2. Configure your Groq API key
+GROQ_API_KEY=your_groq_api_key_here
 
-1. Get a free key at https://console.groq.com/keys
+### Running the Agent
+Interactive Mode
+Simply run:
 
-   ```
+python interview_agent.py
 
-### 3. Run it
+The agent will ask for:
+Role
+Skills
+Experience Level
+Number of Questions
 
-### Interactive mode
+#### Offline Mock Mode
 
-Start the interview with:
+The project includes a mock mode for testing the complete workflow without an API key or network connection.
 
-```bash
-python interview_agent.py.
+python interview_agent.py \
+    --role "Data Analyst" \
+    --skills "SQL, Python, Statistics" \
+    --num-questions 5 \
+    --answers-file sample_output/sample_answers.json \
+    --mock
 
-# PROJECT STRUCTURE
+
+### PROJECT STRUCTURE
 
 
 interview_agent/
@@ -411,7 +405,7 @@ python interview_agent.py --role "Data Analyst" \
 Every run writes a timestamped transcript to `sessions/<timestamp>_<role>.json`
 and `.md`.
 
-### DEMO
+### DEMO WITH API KEY
 
    ==================================================
            AI INTERVIEW AGENT
