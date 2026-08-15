@@ -29,49 +29,64 @@ It:
 💾 Saves the complete interview as JSON + Markdown
 
 
-### The key idea
-
-Candidate
-    │
-    
-    │ Role + Skills + Experience
-    ▼
-    
-┌─────────────────────────────┐
-│     AI INTERVIEWER          │
-│                             │
-│ Generate → Ask → Evaluate   │
-│      ↑              │       │
-│      └──── Adapt ───┘       │
-└─────────────────────────────┘
-             │
-             
-             ▼
-      Candidate Profile
-      
-             │
-      ┌──────┼───────┐
-      ▼      ▼       ▼
-    Score  Strengths Gaps
-    
-             │
-             ▼
-       Recommendation
 
 
-### | Feature                       | What it does                                |
-| ----------------------------- | ------------------------------------------- |
+### 🧠 How the Agent Works
+
+```text
+                    ┌──────────────────────┐
+                    │      CANDIDATE       │
+                    └──────────┬───────────┘
+                               │
+                    Role + Skills + Experience
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │   AI INTERVIEWER     │
+                    │                      │
+                    │ Generate → Ask       │
+                    │      ↓               │
+                    │ Evaluate Answer      │
+                    │      ↓               │
+                    │ Adapt Next Question  │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │  CANDIDATE PROFILE   │
+                    └──────────┬───────────┘
+                               │
+                ┌──────────────┼──────────────┐
+                ▼              ▼              ▼
+           ┌────────┐   ┌────────────┐  ┌────────────┐
+           │ SCORE  │   │ STRENGTHS  │  │    GAPS    │
+           └────────┘   └────────────┘  └────────────┘
+                │              │              │
+                └──────────────┼──────────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │    RECOMMENDATION    │
+                    │ Ready / Improve /    │
+                    │ Not Recommended      │
+                    └──────────────────────┘
+
+
+## ⭐ Key Features
+
+| Feature | What it does |
+|---|---|
 | 🤖 **AI Question Generation** | Generates role-specific technical questions |
-| 🎯 **Experience Awareness**   | Fresher / Intermediate / Advanced           |
-| 💬 **Interactive Interview**  | Conducts the interview directly in the CLI  |
-| 📝 **Multi-line Answers**     | Supports coding and detailed responses      |
-| ⚡ **Instant Evaluation**      | Scores every answer immediately             |
-| 📊 **Final Assessment**       | Calculates an overall interview score       |
-| 🔍 **Gap Detection**          | Identifies areas requiring improvement      |
-| 🎯 **Recommendation**         | Provides a hiring-style recommendation      |
-| 💾 **Persistent Sessions**    | Saves JSON + Markdown transcripts           |
-| 🧪 **Mock Mode**              | Runs without API/network                    |
-| 📁 **Reproducible Mode**      | Supports predefined answer files            |
+| 🎯 **Experience Awareness** | Fresher / Intermediate / Advanced |
+| 🔄 **Adaptive Interview** | Adapts the interview based on candidate responses |
+| 💬 **Interactive Interview** | Conducts the interview directly in the CLI |
+| 📝 **Multi-line Answers** | Supports coding and detailed responses |
+| ⚡ **Instant Evaluation** | Scores every answer immediately |
+| 📊 **Final Assessment** | Calculates an overall interview score |
+| 🔍 **Gap Detection** | Identifies areas requiring improvement |
+| 🎯 **Recommendation** | Provides a hiring-style recommendation |
+| 💾 **Persistent Sessions** | Saves JSON + Markdown transcripts |
+| 🧪 **Mock Mode** | Runs without API/network |
+| 📁 **Reproducible Mode** | Supports predefined answer files |
       
 
 ### HOW THE AGENT WORKS
@@ -384,12 +399,12 @@ Enter choice (1-3): 2
 How many questions? [default: 5]: 3
 
 --------------------------------------------------
-INTERVIEW CONFIGURATION
+#### INTERVIEW CONFIGURATION
 --------------------------------------------------
-Role             : PYTHON
-Skills           : python
-Experience Level : Intermediate
-Questions        : 3
+    Role             : PYTHON
+    Skills           : python
+    Experience Level : Intermediate
+    Questions        : 3
 --------------------------------------------------
 
 Start interview? (y/n): y
