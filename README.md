@@ -87,9 +87,7 @@ Save Interview Report
                     └──────────────────────┘
 
 
-
 ---
-
 
 ### ⭐ Key Features
 
@@ -118,7 +116,10 @@ Save Interview Report
 | 🧪 **Mock Mode** | Runs without API/network |
 
 | 📁 **Reproducible Mode** | Supports predefined answer files |
-      
+
+ 
+---
+
 
 ## HOW THE AGENT WORKS
 
