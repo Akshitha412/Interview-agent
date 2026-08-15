@@ -4,7 +4,7 @@ An AI-powered adaptive technical interviewer that evaluates candidates in real t
 
 Role + Skills + Experience → Adaptive Interview → Instant Evaluation → Hiring Recommendation
 
-# Why This Agent?
+## Why This Agent?
 
 Traditional mock interviews usually give you a fixed list of questions and a final score.
 
@@ -110,9 +110,8 @@ Candidate
                          JSON + Markdown Report
 
 ## Interactive Interview
-Run:
-python interview_agent.py
-The agent asks:
+    Run: python interview_agent.py
+     
 ==================================================
               AI INTERVIEW AGENT
 ==================================================
@@ -142,7 +141,7 @@ to the candidate's experience.
 | Intermediate | Applied concepts, problem solving, practical scenarios |
 | Advanced | System design, optimization, architecture, complex scenarios |
 
-# Multi-line answers
+## Multi-line answers
 
 Coding questions aren't restricted to one line.
 
@@ -166,7 +165,7 @@ Press ':submit' on a new line when you are finished.
 
 his is a great feature to demonstrate, so keep it prominent
 
-# FINAL CANDIDATE ASSESSMENT
+## FINAL CANDIDATE ASSESSMENT
 
 ==================================================
              FINAL EVALUATION
@@ -195,7 +194,7 @@ The candidate demonstrated strong Python and SQL fundamentals
 with good practical problem-solving ability. Further improvement
 in system design would strengthen their readiness for backend roles.
 
-# ARCHITECTURE
+## ARCHITECTURE
                     ┌───────────────┐
                     │ Candidate     │
                     │ Configuration │
@@ -237,7 +236,7 @@ in system design would strengthen their readiness for backend roles.
                     ▼             ▼
                   JSON          Markdown
 
-# WHAT MAKES IT DIFFERENT
+## WHAT MAKES IT DIFFERENT
 
 This is the section I'd definitely add for a challenge.
 
@@ -276,7 +275,7 @@ Persistent artifacts
 
 Those are much stronger signals in an AI-agent challenge than simply calling an LLM.
 
-# TECH STACK
+## TECH STACK
 | Layer             | Technology              |
 | ----------------- | ----------------------- |
 | Language          | Python                  |
@@ -288,7 +287,7 @@ Those are much stronger signals in an AI-agent challenge than simply calling an 
 | Persistence       | JSON + Markdown         |
 | Testing           | Mock mode               |
 
-## 1 Install
+### 1 Install
 
 
 ```bash
@@ -300,13 +299,13 @@ pip install -r requirements.txt
 
 Requires Python 3.9+.
 
-## 2. Configure your Groq API key
+### 2. Configure your Groq API key
 
 1. Get a free key at https://console.groq.com/keys
 
    ```
 
-## 3. Run it
+### 3. Run it
 
 ### Interactive mode
 
@@ -393,14 +392,18 @@ Press ':submit' on a new line when you are finished.
 > else, executes on;y if the code in try blovks runs perfectly 
 > example is division by zero
 > :submit
-  -> Score: 6/10 | Feedback: The candidate provided a basic understanding of try-except blocks in Python, including the try, except, and else clauses, but the explanation was somewhat simplistic and lacked a concrete example from a recent project, and code syntax was not provided.
+
+  #### Score: 6/10 | 
+  #### Feedback: The candidate provided a basic understanding of try-except blocks in Python, including the try, except, and        clauses, but the explanation was somewhat simplistic and lacked a concrete example from a recent project, and code           syntax was not provided.
 
 Q2: Describe a situation where you had to optimize the performance of a Python script, what steps did you take, and what were the results?
 Type your answer below.
 Press ':submit' on a new line when you are finished.
 > i optimized a python script by first identying the slow part of the code, i reduced unnecassary loops, used built in functions and avoided repeated database quesries , after testing the changes the scrpit ran faster and used less memory
-> :submit
-  -> Score: 6/10 | Feedback: The candidate identified key steps to optimize a Python script, such as reducing unnecessary loops and using built-in functions, but the answer lacks specific details and metrics about the results, such as the percentage improvement in speed and memory usage.
+submit
+
+#### Score: 6/10 |
+#### Feedback: The candidate identified key steps to optimize a Python script, such as reducing unnecessary loops and using built-in functions, but the answer lacks specific details and metrics about the results, such as the percentage improvement in speed and memory usage.
 
 Q3: Can you explain the difference between static typing and dynamic typing in programming languages, and how does Python's dynamic typing affect the way you design and write your code?
 Type your answer below.
@@ -408,9 +411,10 @@ Press ':submit' on a new line when you are finished.
 > static, that check before the program runs, while dynamic determined runtiime
 > python is dynamically typed, so i do not need to declare the type of varible explicty, this makes python flexible
 > :submit
-  -> Score: 4/10 | Feedback: The candidate correctly identified Python as dynamically typed and mentioned the flexibility it provides, but the explanation of static and dynamic typing was brief and lacked clarity, and the answer could benefit from more specific examples and details on how dynamic typing affects code design.
+   #### Score: 4/10 |
+   #### Feedback: The candidate correctly identified Python as dynamically typed and mentioned the flexibility it provides,           but the explanation of static and dynamic typing was brief and lacked clarity, and the answer could benefit from             specific examples and details on how dynamic typing affects code design.
 
-Computing final evaluation...
+### Computing final evaluation...
 
 
 ==================================================
