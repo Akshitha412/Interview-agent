@@ -216,10 +216,15 @@ Type your answer below.
 Press ':submit' on a new line when you are finished.
 
 > def calculate_total(items):
+
 >     total = 0
+
 >     for item in items:
+
 >         total += item
+
 >     return total
+
 > :submit
 
 The answer is then evaluated immediately:
