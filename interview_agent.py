@@ -130,13 +130,32 @@ class MockLLMClient:
         })
 
     @staticmethod
+    @staticmethod
     def _mock_final(user: str) -> str:
         scores = [int(s) for s in re.findall(r'"score":\s*(\d+)', user)]
         avg = round(sum(scores) / len(scores), 1) if scores else 0
+
+        if avg >= 9.0:
+            recommendation = "Strong Hire"
+        elif avg >= 8.0:
+            recommendation = "Hire"
+        elif avg >= 7.0:
+            recommendation = "Consider"
+        elif avg >= 6.0:
+            recommendation = "Weak Consider"
+        else:
+            recommendation = "Needs Improvement"
+
         return json.dumps({
             "overall_score": avg,
-            "strengths": ["(mock) Answered every question", "(mock) Reasonable detail length"],
-            "gaps": ["(mock) No real semantic evaluation was performed offline"],
+            "strengths": [
+                "(mock) Answered every question",
+                "(mock) Reasonable detail length"
+            ],
+            "gaps": [
+                "(mock) No real semantic evaluation was performed offline"
+            ],
+            "recommendation": recommendation,
             "summary": f"(mock) Candidate averaged {avg}/10 across all questions."
         })
 
@@ -191,12 +210,17 @@ Rules:
   "overall_score": <float 1-10>,
   "strengths": ["...", "..."],
   "gaps": ["...", "..."],
-  "recommendation": "<Ready / Needs Improvement / Not Ready>",
-  "summary": "<2-4 sentence overall summary>"
+  "recommendation": "<Strong Hire / Hire / Consider / Weak Consider / Needs Improvement>",  "summary": "<2-4 sentence overall summary>"
 }
 - Base the overall_score primarily on the per-question scores provided.
 - Consider the candidate's experience level when making the recommendation.
 - Be fair and specific.
+- Recommendation thresholds:
+  - 9.0-10.0 = Strong Hire
+  - 8.0-8.9 = Hire
+  - 7.0-7.9 = Consider
+  - 6.0-6.9 = Weak Consider
+  - Below 6.0 = Needs Improvement
 """
 
 

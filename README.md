@@ -321,6 +321,7 @@ Requires **Python 3.9+**.
 
 ### Interactive mode
 
+<<<<<<< HEAD
 ```bash
 python interview_agent.py
 ```
@@ -365,9 +366,45 @@ python interview_agent.py \
 ```
 
 Every run — mock or live — writes a timestamped transcript to `sessions/<timestamp>_<role>.json` and `sessions/<timestamp>_<role>.md`.
+=======
+```bash
+python interview_agent.py
+```
+
+The agent will prompt you for:
+
+- Role
+- Skills
+- Experience level
+- Number of questions
+
+```
+==================================================
+              AI INTERVIEW AGENT
+==================================================
+
+Enter your role: Python Developer
+Enter your skills (comma separated): Python, SQL, Flask
+
+Select your experience level:
+1. Fresher
+2. Intermediate
+3. Advanced
+Enter choice (1-3): 2
+
+How many questions? [default: 5]: 5
+```
+>>>>>>> 0bbe37e (Fix interview recommendation logic)
 
 ---
 
+<<<<<<< HEAD
+=======
+
+
+---
+
+>>>>>>> 0bbe37e (Fix interview recommendation logic)
 ## Project Structure
 
 ```
@@ -527,3 +564,7 @@ Needs Improvement
 
 ---
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0bbe37e (Fix interview recommendation logic)
